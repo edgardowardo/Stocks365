@@ -1,6 +1,6 @@
 # Stocks365
 
- <img src="icon.jpg" width="30">
+ <img src="icon.jpg" width="60">
 
 UI inspired from stocks app
 
