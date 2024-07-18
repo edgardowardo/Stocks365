@@ -37,7 +37,7 @@ extension StockViewModel: StockObserving {
     func updateStock(_ stock: Stock, at index: Int) {
         guard index < stocks.count else { return }
         let named = stocks[index]
-        let isChanged: Bool = (named.price != stock.price)
+        let isChanged: Bool = stock.price == nil ? false : (named.price != stock.price)
         let merged = named.merge(with: stock)
         stocks[index] = merged
         self.onUpdate?(merged, index, isChanged)
