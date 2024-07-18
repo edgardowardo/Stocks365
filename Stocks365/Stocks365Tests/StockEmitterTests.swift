@@ -36,10 +36,11 @@ final class StockEmitterTests: XCTestCase {
         let expectation1 = expectation(description: "Stock 657.69 updated")
         let expectation2 = expectation(description: "Stock 159.82 updated")
         let expectation3 = expectation(description: "Stock 11.78 updated")
-        let expectation4 = expectation(description: "Stock 657.55 updated")
-        let expectation5 = expectation(description: "Stock 159.79 updated")
+        let expectation4 = expectation(description: "No Stock updated due to Blucora")
+        let expectation5 = expectation(description: "Stock 657.55 updated")
+        let expectation6 = expectation(description: "Stock 159.79 updated")
 
-        var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5]
+        var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5, expectation6]
 
         mockViewModel.onUpdate = { [weak self] (stock, index, isChanged) in
 
@@ -61,11 +62,16 @@ final class StockEmitterTests: XCTestCase {
                     XCTAssertEqual(self?.mockViewModel.stocks[2].price, 11.78)
                     XCTAssertEqual(self?.mockViewModel.stocks[3].price, 13.43)
                 } else if expectations.first == expectation4 {
-                    XCTAssertEqual(self?.mockViewModel.stocks[0].price, 657.55)
+                    XCTAssertEqual(self?.mockViewModel.stocks[0].price, 657.69)
                     XCTAssertEqual(self?.mockViewModel.stocks[1].price, 159.82)
                     XCTAssertEqual(self?.mockViewModel.stocks[2].price, 11.78)
                     XCTAssertEqual(self?.mockViewModel.stocks[3].price, 13.43)
                 } else if expectations.first == expectation5 {
+                    XCTAssertEqual(self?.mockViewModel.stocks[0].price, 657.55)
+                    XCTAssertEqual(self?.mockViewModel.stocks[1].price, 159.82)
+                    XCTAssertEqual(self?.mockViewModel.stocks[2].price, 11.78)
+                    XCTAssertEqual(self?.mockViewModel.stocks[3].price, 13.43)
+                } else if expectations.first == expectation6 {
                     XCTAssertEqual(self?.mockViewModel.stocks[0].price, 657.55)
                     XCTAssertEqual(self?.mockViewModel.stocks[1].price, 159.79)
                     XCTAssertEqual(self?.mockViewModel.stocks[2].price, 11.78)
