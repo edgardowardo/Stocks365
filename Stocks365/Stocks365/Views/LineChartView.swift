@@ -26,7 +26,7 @@ class LineChartView: UIView {
         backgroundColor = .clear
     }
         
-    // Add a new data point and keep only the last 5 points
+    // Add a new data point and keep only the last 10 points
     func addDataPoint(_ value: CGFloat) {
         if dataPoints.count >= limit {
             dataPoints.removeFirst()
@@ -51,7 +51,12 @@ class LineChartView: UIView {
         // Calculate scaling factors
         let maxValue = dataPoints.max() ?? 1
         let minValue = dataPoints.min() ?? 0
-        let yScale = rect.height / (maxValue - minValue)
+        let yScale: CGFloat
+        if maxValue == minValue {
+            yScale = rect.height / 2 // Default scale to ensure visibility when all values are equal
+        } else {
+            yScale = rect.height / (maxValue - minValue)
+        }
         let xStep = rect.width / CGFloat(max(1, dataPoints.count - 1))
         
         // Draw the data points
