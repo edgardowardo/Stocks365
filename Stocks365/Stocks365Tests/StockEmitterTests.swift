@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Ticker365
+@testable import Stocks365
 
 final class StockEmitterTests: XCTestCase {
     var stockEmitter: StockEmitter!
