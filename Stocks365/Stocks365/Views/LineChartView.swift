@@ -10,6 +10,7 @@ import UIKit
 class LineChartView: UIView {
     
     private var dataPoints: [CGFloat] = []
+    private let limit = 10
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,10 +28,10 @@ class LineChartView: UIView {
         
     // Add a new data point and keep only the last 5 points
     func addDataPoint(_ value: CGFloat) {
-        if dataPoints.count >= 5 {
+        if dataPoints.count >= limit {
             dataPoints.removeFirst()
         } else if dataPoints.count == 0 {
-            dataPoints = Array(repeating: value, count: 4)
+            dataPoints = Array(repeating: value, count: limit - 1)
         }
         dataPoints.append(value)
         setNeedsDisplay() // Trigger a redraw
