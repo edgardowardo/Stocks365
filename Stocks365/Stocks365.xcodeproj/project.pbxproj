@@ -12,7 +12,6 @@
 		773068A92C4902D000A6E63C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 773068A82C4902D000A6E63C /* Base */; };
 		773068AB2C4902D200A6E63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773068AA2C4902D200A6E63C /* Assets.xcassets */; };
 		773068AE2C4902D200A6E63C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 773068AD2C4902D200A6E63C /* Base */; };
-		773068B92C4902D200A6E63C /* Stocks365Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068B82C4902D200A6E63C /* Stocks365Tests.swift */; };
 		773068C32C4902D200A6E63C /* Stocks365UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068C22C4902D200A6E63C /* Stocks365UITests.swift */; };
 		773068C52C4902D200A6E63C /* Stocks365UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068C42C4902D200A6E63C /* Stocks365UITestsLaunchTests.swift */; };
 		773068DB2C4903E900A6E63C /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068D12C4903E800A6E63C /* StockCell.swift */; };
@@ -22,6 +21,11 @@
 		773068DF2C4903E900A6E63C /* StockEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068D92C4903E900A6E63C /* StockEmitter.swift */; };
 		773068E32C4908A500A6E63C /* deltas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 773068E02C4908A500A6E63C /* deltas.csv */; };
 		773068E42C4908A500A6E63C /* snapshot.csv in Resources */ = {isa = PBXBuildFile; fileRef = 773068E12C4908A500A6E63C /* snapshot.csv */; };
+		773068EA2C4909A800A6E63C /* test-deltas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 773068E52C4909A800A6E63C /* test-deltas.csv */; };
+		773068EB2C4909A800A6E63C /* test-snapshot.csv in Resources */ = {isa = PBXBuildFile; fileRef = 773068E62C4909A800A6E63C /* test-snapshot.csv */; };
+		773068EC2C4909A800A6E63C /* StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068E72C4909A800A6E63C /* StockTests.swift */; };
+		773068ED2C4909A800A6E63C /* StockEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068E82C4909A800A6E63C /* StockEmitterTests.swift */; };
+		773068EE2C4909A800A6E63C /* StockViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068E92C4909A800A6E63C /* StockViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +54,6 @@
 		773068AD2C4902D200A6E63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		773068AF2C4902D200A6E63C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		773068B42C4902D200A6E63C /* Stocks365Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stocks365Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		773068B82C4902D200A6E63C /* Stocks365Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks365Tests.swift; sourceTree = "<group>"; };
 		773068BE2C4902D200A6E63C /* Stocks365UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Stocks365UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		773068C22C4902D200A6E63C /* Stocks365UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks365UITests.swift; sourceTree = "<group>"; };
 		773068C42C4902D200A6E63C /* Stocks365UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks365UITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -61,6 +64,11 @@
 		773068D92C4903E900A6E63C /* StockEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockEmitter.swift; sourceTree = "<group>"; };
 		773068E02C4908A500A6E63C /* deltas.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deltas.csv; sourceTree = "<group>"; };
 		773068E12C4908A500A6E63C /* snapshot.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = snapshot.csv; sourceTree = "<group>"; };
+		773068E52C4909A800A6E63C /* test-deltas.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-deltas.csv"; sourceTree = "<group>"; };
+		773068E62C4909A800A6E63C /* test-snapshot.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-snapshot.csv"; sourceTree = "<group>"; };
+		773068E72C4909A800A6E63C /* StockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTests.swift; sourceTree = "<group>"; };
+		773068E82C4909A800A6E63C /* StockEmitterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockEmitterTests.swift; sourceTree = "<group>"; };
+		773068E92C4909A800A6E63C /* StockViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +138,11 @@
 		773068B72C4902D200A6E63C /* Stocks365Tests */ = {
 			isa = PBXGroup;
 			children = (
-				773068B82C4902D200A6E63C /* Stocks365Tests.swift */,
+				773068E82C4909A800A6E63C /* StockEmitterTests.swift */,
+				773068E72C4909A800A6E63C /* StockTests.swift */,
+				773068E92C4909A800A6E63C /* StockViewModelTests.swift */,
+				773068E52C4909A800A6E63C /* test-deltas.csv */,
+				773068E62C4909A800A6E63C /* test-snapshot.csv */,
 			);
 			path = Stocks365Tests;
 			sourceTree = "<group>";
@@ -309,6 +321,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773068EB2C4909A800A6E63C /* test-snapshot.csv in Resources */,
+				773068EA2C4909A800A6E63C /* test-deltas.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +354,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				773068B92C4902D200A6E63C /* Stocks365Tests.swift in Sources */,
+				773068EC2C4909A800A6E63C /* StockTests.swift in Sources */,
+				773068ED2C4909A800A6E63C /* StockEmitterTests.swift in Sources */,
+				773068EE2C4909A800A6E63C /* StockViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
