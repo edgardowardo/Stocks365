@@ -1,6 +1,8 @@
 # Stocks365
 
-Stocks 365. UI inspired from stocks app
+ <img src="icon.jpg" width="30">
+
+UI inspired from stocks app
 
 Model, programmatic Views, View Model with tests
 
