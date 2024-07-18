@@ -12,6 +12,7 @@ class StockCell: UICollectionViewCell {
     private let companyNameLabel = UILabel()
     private let priceLabel = UILabel()
     private let changeLabel = UILabel()
+    private let lineChartView = LineChartView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,12 +26,14 @@ class StockCell: UICollectionViewCell {
     private func setupViews() {
         addSubview(nameLabel)
         addSubview(companyNameLabel)
+        addSubview(lineChartView)
         addSubview(priceLabel)
         addSubview(changeLabel)
         
         // Configure labels layout here
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         companyNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        lineChartView.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         changeLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -42,6 +45,11 @@ class StockCell: UICollectionViewCell {
             companyNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
             companyNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             companyNameLabel.trailingAnchor.constraint(lessThanOrEqualTo: changeLabel.leadingAnchor, constant: -10),
+
+            lineChartView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
+            lineChartView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -80),
+            lineChartView.heightAnchor.constraint(equalToConstant: 50),
+            lineChartView.widthAnchor.constraint(equalToConstant: 100),
 
             priceLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
@@ -59,7 +67,7 @@ class StockCell: UICollectionViewCell {
         // Style the cell
         layer.borderWidth = 1
         layer.borderColor = UIColor.separator.cgColor
-        backgroundColor = UIColor.secondarySystemBackground
+        backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 8
     }
 
@@ -69,6 +77,9 @@ class StockCell: UICollectionViewCell {
         priceLabel.text = stock.priceDisplayed
         changeLabel.text = stock.changeDisplayed
         
+        // Add a new data point to the chart
+        lineChartView.addDataPoint(CGFloat(stock.price))
+
         // Change color of changeLabel based on value
         if stock.change >= 0 {
             changeLabel.textColor = .systemGreen

@@ -26,6 +26,7 @@
 		773068EC2C4909A800A6E63C /* StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068E72C4909A800A6E63C /* StockTests.swift */; };
 		773068ED2C4909A800A6E63C /* StockEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068E82C4909A800A6E63C /* StockEmitterTests.swift */; };
 		773068EE2C4909A800A6E63C /* StockViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773068E92C4909A800A6E63C /* StockViewModelTests.swift */; };
+		77672BDA2C4940DA00F75ECE /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77672BD92C4940DA00F75ECE /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		773068E72C4909A800A6E63C /* StockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTests.swift; sourceTree = "<group>"; };
 		773068E82C4909A800A6E63C /* StockEmitterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockEmitterTests.swift; sourceTree = "<group>"; };
 		773068E92C4909A800A6E63C /* StockViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockViewModelTests.swift; sourceTree = "<group>"; };
+		77672BD92C4940DA00F75ECE /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				773068D12C4903E800A6E63C /* StockCell.swift */,
+				77672BD92C4940DA00F75ECE /* LineChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				773068A22C4902D000A6E63C /* AppDelegate.swift in Sources */,
 				773068DD2C4903E900A6E63C /* Stock.swift in Sources */,
 				773068DF2C4903E900A6E63C /* StockEmitter.swift in Sources */,
+				77672BDA2C4940DA00F75ECE /* LineChartView.swift in Sources */,
 				773068DB2C4903E900A6E63C /* StockCell.swift in Sources */,
 				773068A42C4902D000A6E63C /* SceneDelegate.swift in Sources */,
 				773068DC2C4903E900A6E63C /* StockViewController.swift in Sources */,
