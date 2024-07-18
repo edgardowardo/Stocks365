@@ -66,5 +66,12 @@ fileprivate func readCSV(filePath: String) -> [Stock]? {
 }
 
 fileprivate extension Stock {
-    func merge(with unnamed: Stock) -> Stock { Stock(name: name, companyName: companyName, price: unnamed.price, change: unnamed.change, chgPercent: unnamed.chgPercent, mktCap: unnamed.mktCap) }
+    func merge(with unnamed: Stock) -> Stock {
+        Stock(name: name,
+              companyName: companyName,
+              price: unnamed.price ?? price,
+              change: unnamed.change ?? change,
+              chgPercent: unnamed.chgPercent,
+              mktCap: unnamed.mktCap)
+    }
 }

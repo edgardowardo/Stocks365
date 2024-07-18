@@ -10,8 +10,8 @@ import Foundation
 struct Stock {
     let name: String
     let companyName: String
-    let price: Double
-    let change: Double
+    let price: Double?
+    let change: Double?
     let chgPercent: String
     let mktCap: String
     
@@ -19,20 +19,18 @@ struct Stock {
         // This line processing could be a regular expression, though it might be over engineered.
         let columns = line.components(separatedBy: ",")
         
-        guard columns.count == 6,
-              let price = Double(columns[2]),
-              let change = Double(columns[3]) else {
+        guard columns.count == 6 else {
             return nil
         }
         self.name = columns[0]
         self.companyName = columns[1]
-        self.price = price
-        self.change = change
+        self.price = Double(columns[2])
+        self.change = Double(columns[3])
         self.chgPercent = columns[4]
         self.mktCap = columns[5].trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-    init(name: String, companyName: String, price: Double, change: Double, chgPercent: String, mktCap: String) {
+    init(name: String, companyName: String, price: Double?, change: Double?, chgPercent: String, mktCap: String) {
         self.name = name
         self.companyName = companyName
         self.price = price

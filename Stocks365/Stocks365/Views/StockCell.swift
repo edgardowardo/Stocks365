@@ -76,12 +76,12 @@ class StockCell: UICollectionViewCell {
         companyNameLabel.text = stock.companyName
         priceLabel.text = stock.priceDisplayed
         changeLabel.text = stock.changeDisplayed
-        
+                
         // Add a new data point to the chart
-        lineChartView.addDataPoint(CGFloat(stock.price))
+        lineChartView.addDataPoint(CGFloat(stock.price ?? 0))
 
         // Change color of changeLabel based on value
-        if stock.change >= 0 {
+        if stock.change ?? 0 >= 0 {
             changeLabel.textColor = .systemGreen
         } else {
             changeLabel.textColor = .systemRed
@@ -104,7 +104,7 @@ class StockCell: UICollectionViewCell {
 }
 
 extension Stock {
-    var priceDisplayed: String { String(format: "%.2f", price) }
+    var priceDisplayed: String { String(format: "%.2f", price ?? 0 ) }
     
-    var changeDisplayed: String { String(format: "%.2f", change) }
+    var changeDisplayed: String { String(format: "%.2f", change ?? 0 ) }
 }
